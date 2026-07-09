@@ -1,0 +1,49 @@
+# Datasets
+data/
+datasets/
+
+# Training and inference outputs
+result/
+results/
+runs/
+outputs/
+final_test_outputs/
+logs/
+
+# Checkpoints and model exports
+checkpoint/
+checkpoints/
+*.pkl
+*.pth
+*.pt
+*.onnx
+*.engine
+
+# Logs and TensorBoard
+*.log
+person1_full_train_log.txt
+person1_*_log.txt
+events.out.tfevents*
+
+# Local backups
+*.bak
+*.bak_*
+
+# Large local archives
+*.zip
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Python/cache/editor files
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# Large generated experiment images
+final_experiment_pack/visualizations/
+final_experiment_pack/bad_cases/
+final_experiment_pack/gray_surface/

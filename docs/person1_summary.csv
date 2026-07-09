@@ -1,0 +1,3 @@
+backbone,fusion,epochs,batch_size,best_iou,best_iou_epoch,best_niou,best_niou_epoch,selected_checkpoint,log_path,notes
+FPN,BiLocal,30,8,0.26645,29,0.30931,29,"result/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl","person1_full_train_log.txt","Selected checkpoint is both best IoU and best nIoU."
+FPN,AsymBi,30,8,0.40594,26,0.49409,22,"result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl","person1_full_train_log.txt","Selected checkpoint is by best IoU. Best nIoU checkpoint is result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 22_IoU-0.3752_nIoU-0.4941.pkl."
