@@ -2,16 +2,18 @@
 
 ## 项目简介
 
-本仓库是红外小目标检测/分割课程大作业代码仓库。当前主要完成的是 ACM segmentation line 的 person1 实验，围绕 SIRST 数据集上的小目标分割任务进行评估、结果整理和可视化。
+本仓库是红外小目标检测/分割课程大作业代码仓库。当前主要完成的是 ACM segmentation line 的 SIRST 测试集实验，围绕红外小目标分割任务进行评估、结果整理和可视化。
 
 仓库提交版本只包含代码、文档、表格和少量代表性图片；不包含数据集、checkpoint、完整训练日志和大量预测图。
 
 ## 当前已完成内容
 
-已完成 person1 的两个 ACM 配置：
+当前最终主表包含四个 ACM 配置：
 
 * FPN + BiLocal
 * FPN + AsymBi
+* UNet + AsymBi
+* UNet + BiGlobal
 
 测试集为 `data/sirst/idx_427/test.txt`，共 640 张图像。当前 ACM 代码中 `mode='val'` 读取的就是该 `test.txt`，因此训练阶段 validation 指标与 final test 指标一致。
 
@@ -33,8 +35,10 @@ Fa 定义为 `false_alarm_pixels / total_images`。
 |---|---|---:|---:|---:|---:|
 | FPN | BiLocal | 0.2664489244 | 0.3093132385 | 0.9875 | 704.678125 |
 | FPN | AsymBi | 0.4059420923 | 0.4855873167 | 0.990625 | 360.0703125 |
+| UNet | AsymBi | 0.3262435852 | 0.3772964333 | 0.9953125 | 530.640625 |
+| UNet | BiGlobal | 0.3883507577 | 0.4837368390 | 0.99375 | 389.1375 |
 
-说明：FPN+AsymBi 的正式选用 checkpoint 是 best-IoU checkpoint。训练过程中 epoch 22 曾取得 best nIoU 0.49409，但当前 final test 表按 epoch 26 best-IoU checkpoint 汇总。
+说明：FPN+AsymBi 的正式选用 checkpoint 是 best-IoU checkpoint。训练过程中 epoch 22 曾取得 best nIoU 0.49409，但当前 final test 表按 epoch 26 best-IoU checkpoint 汇总。UNet+AsymBi 使用最终确认的 `asymbi.pt`，UNet+BiGlobal 使用完整 result 目录中的 `.pkl` checkpoint，不混用 `.pt` 和 `.pkl` 指标。
 
 ## 目录结构说明
 
@@ -138,8 +142,8 @@ python tools/visualize_acm_predictions.py `
 
 主要可交付材料位于：
 
-* `final_experiment_pack/tables/final_metrics_person1.csv`
 * `final_experiment_pack/tables/final_metrics_all_available.csv`
+* `final_experiment_pack/tables/final_metrics_person1.csv`
 * `final_experiment_pack/tables/unavailable_experiments_note.csv`
 * `final_experiment_pack/figures/`
 * `final_experiment_pack/report_snippets/`

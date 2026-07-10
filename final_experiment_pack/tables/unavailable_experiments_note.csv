@@ -1,5 +1,5 @@
 experiment,status,reason,what_is_needed_to_run
-PConv k=3 vs k=4 ablation,N/A,No available ACM/Yolo checkpoint for this item in current workspace.,"Model code, trained checkpoints, and a confirmed evaluation protocol for PConv variants."
-SD Loss alpha=0.3/0.5/0.7 ablation,N/A,Current ACM segmentation line does not include this loss ablation result.,Training outputs or checkpoints for each SD Loss alpha setting.
-SIRST to NUAA cross-dataset generalization,N/A,No NUAA or NUAA-SIRST test data directory was found in the current workspace scan.,NUAA dataset prepared with a documented split and compatible masks or labels.
-YOLO mAP50 comparison,N/A,Current completed results are from ACM segmentation checkpoints; YOLO detection checkpoints/results are not available for this comparison.,YOLO prediction/results.csv files or trained YOLO checkpoints evaluated on the same data split.
+PConv k=3 vs k=4 ablation,N/A,no available final checkpoints in current ACM segmentation line,trained final checkpoints and a confirmed evaluation protocol for each PConv kernel setting
+SD Loss alpha=0.3/0.5/0.7 ablation,N/A,no available final checkpoints in current ACM segmentation line,trained final checkpoints for each SD Loss alpha setting
+SIRST to NUAA cross-dataset generalization,N/A,NUAA dataset not found / not prepared,prepared NUAA dataset with compatible split and masks or labels
+YOLO mAP50,N/A,current final available models are ACM segmentation models; mAP50 belongs to detection-box evaluation and should not be mixed with ACM segmentation metrics,YOLO checkpoints or predictions evaluated with a detection-box mAP50 pipeline

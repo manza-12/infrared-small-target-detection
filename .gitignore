@@ -9,6 +9,7 @@ runs/
 outputs/
 final_test_outputs/
 logs/
+local_archive/
 
 # Checkpoints and model exports
 checkpoint/
@@ -21,6 +22,7 @@ checkpoints/
 
 # Logs and TensorBoard
 *.log
+*_log.txt
 person1_full_train_log.txt
 person1_*_log.txt
 events.out.tfevents*

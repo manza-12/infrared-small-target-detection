@@ -1,47 +1,88 @@
 # Final Experiment Pack
 
-This folder collects the currently deliverable materials for Experiment A and Experiment B based on available ACM/person1 results. No training was performed while creating this package.
+This folder collects the final deliverable materials for the ACM segmentation line on the SIRST test split. It contains tables, figures, report snippets, and a small number of representative images. It does not contain datasets or checkpoints.
 
-## Tables
+## Included Models
 
-* `tables/final_metrics_person1.csv`: final person1 IoU/nIoU table, with Pd/Fa if available.
-* `tables/final_metrics_all_available.csv`: all scanned configurations with usable final-test results. At present this is person1 only.
-* `tables/unavailable_experiments_note.csv`: planned but unavailable experiments marked as N/A.
+The final main table contains four models:
+
+| Person | Backbone | Fusion | Selected weight |
+|---|---|---|---|
+| person1 | FPN | BiLocal | `.pkl` |
+| person1 | FPN | AsymBi | `.pkl` |
+| person3 | UNet | AsymBi | `asymbi.pt` |
+| person4 | UNet | BiGlobal | `.pkl` |
+
+## Main Table
+
+Main quantitative table:
+
+* `tables/final_metrics_all_available.csv`
+
+person1-only table:
+
+* `tables/final_metrics_person1.csv`
+
+Unavailable planned experiments:
+
+* `tables/unavailable_experiments_note.csv`
 
 ## Figures
 
-* `figures/person1_iou_comparison.png`
-* `figures/person1_niou_comparison.png`
-* `figures/all_available_iou_comparison.png`
-* `figures/all_available_niou_comparison.png`
+Metric figures are stored in `figures/`:
+
+* `all_available_iou_comparison.png`
+* `all_available_niou_comparison.png`
+* `all_available_pd_comparison.png`
+* `all_available_fa_comparison.png`
+* `person1_iou_comparison.png`
+* `person1_niou_comparison.png`
 
 ## Visualizations
 
-* `visualizations/FPN_BiLocal/`: original / GT / prediction triplets for FPN+BiLocal.
-* `visualizations/FPN_AsymBi/`: original / GT / prediction triplets for FPN+AsymBi.
+Full generated qualitative results are stored in `visualizations/`:
+
+* `visualizations/FPN_BiLocal/`
+* `visualizations/FPN_AsymBi/`
+* `visualizations/UNet_AsymBi/`
+* `visualizations/UNet_BiGlobal/`
+
+These folders may contain many generated images and are normally excluded from GitHub by `.gitignore`.
 
 ## Bad Cases
 
-* `bad_cases/`: low-IoU candidate triplets.
-* `bad_cases/bad_case_table.csv`: candidate metadata.
+Bad-case candidates are stored in `bad_cases/`.
+
+The metadata table is:
+
+* `bad_cases/bad_case_table.csv`
 
 ## Gray Surface
 
-* `gray_surface/`: 3D gray response surfaces and matching 2D patches. Generated cases: 10.
+The 3D gray response examples are stored in `gray_surface/`. These images describe the SIRST infrared small-target data itself and are not model-dependent.
+
+## Selected Examples
+
+Small representative images for GitHub or PPT preview are stored in:
+
+* `selected_examples/`
+
+The selected set is intentionally small to keep the repository lightweight.
 
 ## Report Snippets
 
-* `report_snippets/experiment_setup.md`
-* `report_snippets/results_analysis_person1.md`
-* `report_snippets/limitations.md`
-* `report_snippets/metric_definitions.md`
+Copy-ready report fragments are stored in `report_snippets/`:
 
-## Completed and N/A Items
+* `experiment_setup.md`
+* `results_analysis_person1.md`
+* `results_analysis_all_available.md`
+* `limitations.md`
+* `metric_definitions.md`
 
-Completed: person1 FPN+BiLocal and FPN+AsymBi on SIRST `test.txt`.
+## Notes
 
-N/A: PConv k=3/4 ablation, SD Loss alpha ablation, SIRST to NUAA generalization, and YOLO mAP50 comparison, because the current ACM segmentation workspace does not contain the required checkpoints or data.
+The final SIRST test split is `data/sirst/idx_427/test.txt` with 640 images and 0 train/test overlap. In the current ACM code, validation mode reads this same split, so this should be described clearly in reports.
 
-## How to Use in the Paper
+The current experiment pack does not include datasets or checkpoints. GitHub should contain only code, documentation, tables, figures, and a small number of selected example images.
 
-Use `tables/final_metrics_person1.csv` for the quantitative table, `figures/` for metric bar charts, `visualizations/` for qualitative segmentation examples, `bad_cases/` for failure analysis, and `gray_surface/` for infrared small-target gray response illustration.
+YOLO mAP50, PConv ablations, SD Loss ablations, and NUAA cross-dataset testing are marked as N/A for the current ACM segmentation main table.

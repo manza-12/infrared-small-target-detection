@@ -8,8 +8,17 @@ Number of test images: 640.
 
 Train/test overlap: 0 names overlapped between `trainval.txt` and `test.txt`.
 
-Model line: ACM segmentation line.
+Task line: ACM segmentation line. In the current ACM codebase, `mode='val'` reads `idx_427/test.txt`, so final test and training validation use the same split. This should be stated explicitly and should not be interpreted as an external cross-dataset generalization test.
 
-Person1 configurations: FPN+BiLocal and FPN+AsymBi.
+Models included in the final main table:
 
-Metrics: IoU and nIoU are the primary segmentation metrics. Pd/Fa are reported when computed from thresholded prediction masks; mAP50 is not used for the ACM segmentation line.
+| Person | Backbone | Fusion | Selected weight type |
+|---|---|---|---|
+| person1 | FPN | BiLocal | `.pkl` |
+| person1 | FPN | AsymBi | `.pkl` |
+| person3 | UNet | AsymBi | `.pt` |
+| person4 | UNet | BiGlobal | `.pkl` |
+
+Metrics: IoU, nIoU, Pd, and Fa. Fa is defined as `false_alarm_pixels / total_images`.
+
+mAP50 is a detection-box metric and is not applicable to the current ACM segmentation main table.
