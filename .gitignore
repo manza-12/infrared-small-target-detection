@@ -8,6 +8,7 @@ results/
 runs/
 outputs/
 final_test_outputs/
+background_runs/
 logs/
 local_archive/
 

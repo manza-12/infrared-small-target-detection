@@ -1,11 +1,8 @@
 # Metric Definitions
 
-IoU: intersection-over-union between the thresholded prediction mask and the ground-truth mask, computed by the ACM segmentation evaluator.
+- IoU: global segmentation intersection over union between predicted target pixels and ground-truth target pixels.
+- nIoU: sample-wise normalized IoU used by the ACM evaluation code.
+- Pd: image-level detection probability, computed as `detected target images / target images`.
+- Fa: false alarm pixels per image, computed as `false_alarm_pixels / total_images`.
 
-nIoU: sample-wise normalized IoU used by the ACM codebase, computed over thresholded binary masks and aggregated over the test split.
-
-Pd: image-level probability of detection. A target image is counted as detected if the prediction mask and the GT mask have at least one overlapping foreground pixel.
-
-Fa: false alarm value. In this package, `Fa = false_alarm_pixels / total_images`, where false alarm pixels are predicted foreground pixels outside the GT foreground region.
-
-mAP50: a detection-box metric at IoU threshold 0.50. It is not used in the current ACM segmentation main table.
+mAP50 is not used in the current ACM segmentation main table. It belongs to the YOLO detection-box evaluation line and should not be mixed directly with ACM segmentation-mask metrics.

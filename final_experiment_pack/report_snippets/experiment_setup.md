@@ -1,24 +1,13 @@
 # Experiment Setup
 
-Dataset: SIRST.
+The experiments use the SIRST `idx_427` split. The final test split is `data/sirst/idx_427/test.txt` and contains 640 test images. The train/test overlap is 0 according to the prepared split files.
 
-Test split: `data/sirst/idx_427/test.txt`.
+The completed ACM segmentation comparison covers a full 2 backbones x 3 fusion strategies matrix:
 
-Number of test images: 640.
+- Backbones: FPN, UNet
+- Fusion strategies: BiLocal, AsymBi, BiGlobal
+- Total models: six ACM segmentation models
 
-Train/test overlap: 0 names overlapped between `trainval.txt` and `test.txt`.
+All models are evaluated on the same SIRST test split with IoU, nIoU, Pd, and Fa. Pd is image-level target detection probability. Fa is defined as `false_alarm_pixels / total_images`.
 
-Task line: ACM segmentation line. In the current ACM codebase, `mode='val'` reads `idx_427/test.txt`, so final test and training validation use the same split. This should be stated explicitly and should not be interpreted as an external cross-dataset generalization test.
-
-Models included in the final main table:
-
-| Person | Backbone | Fusion | Selected weight type |
-|---|---|---|---|
-| person1 | FPN | BiLocal | `.pkl` |
-| person1 | FPN | AsymBi | `.pkl` |
-| person3 | UNet | AsymBi | `.pt` |
-| person4 | UNet | BiGlobal | `.pkl` |
-
-Metrics: IoU, nIoU, Pd, and Fa. Fa is defined as `false_alarm_pixels / total_images`.
-
-mAP50 is a detection-box metric and is not applicable to the current ACM segmentation main table.
+mAP50 is not used in the current ACM segmentation main table because it is a detection-box metric for the YOLO line, not a segmentation-mask metric for these ACM experiments.

@@ -1,0 +1,7 @@
+backbone,fusion,IoU,nIoU,Pd,Fa,rank_iou,rank_niou,notes
+FPN,BiLocal,0.26644892435619305,0.3093132385053442,0.9875,704.678125,6,6,Backbone and Fusion Strategy Ablation; same SIRST test split.
+FPN,AsymBi,0.40594209225945366,0.48558731667721544,0.990625,360.0703125,1,1,Backbone and Fusion Strategy Ablation; same SIRST test split.
+FPN,BiGlobal,0.36606017963742704,0.44571402346026723,0.9890625,440.821875,4,3,Backbone and Fusion Strategy Ablation; same SIRST test split.
+UNet,BiLocal,0.37725993368050414,0.43481443153606963,0.9859375,415.790625,3,4,Backbone and Fusion Strategy Ablation; same SIRST test split.
+UNet,AsymBi,0.32624358516384305,0.3772964333345205,0.9953125,530.640625,5,5,Backbone and Fusion Strategy Ablation; same SIRST test split.
+UNet,BiGlobal,0.3883507577176704,0.4837368389739455,0.99375,389.1375,2,2,Backbone and Fusion Strategy Ablation; same SIRST test split.
