@@ -20,26 +20,26 @@ Note: in the current ACM dataset class, `mode='val'` reads `idx_427/test.txt`. T
 ### Smoke Test
 
 ```powershell
-& "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python tools\evaluate_acm_checkpoint.py --backbone-mode FPN --fuse-mode BiLocal --checkpoint "result\2026-07-10-01-38-03_FPN_BiLocal\checkpoint\Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl" --data-root data\sirst --split test --batch-size 8 --output-dir final_test_outputs\person1\FPN_BiLocal --max-batches 1
+& "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python tools\evaluate_acm_checkpoint.py --backbone-mode FPN --fuse-mode BiLocal --checkpoint "experiments\\training_runs\\2026-07-10-01-38-03_FPN_BiLocal\checkpoint\Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl" --data-root data\sirst --split test --batch-size 8 --output-dir experiments\\final_test_outputs\\person1\FPN_BiLocal --max-batches 1
 ```
 
 ### FPN + BiLocal
 
 ```powershell
-& "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python tools\evaluate_acm_checkpoint.py --backbone-mode FPN --fuse-mode BiLocal --checkpoint "result\2026-07-10-01-38-03_FPN_BiLocal\checkpoint\Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl" --data-root data\sirst --split test --batch-size 8 --output-dir final_test_outputs\person1\FPN_BiLocal
+& "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python tools\evaluate_acm_checkpoint.py --backbone-mode FPN --fuse-mode BiLocal --checkpoint "experiments\\training_runs\\2026-07-10-01-38-03_FPN_BiLocal\checkpoint\Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl" --data-root data\sirst --split test --batch-size 8 --output-dir experiments\\final_test_outputs\\person1\FPN_BiLocal
 ```
 
 ### FPN + AsymBi
 
 ```powershell
-& "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python tools\evaluate_acm_checkpoint.py --backbone-mode FPN --fuse-mode AsymBi --checkpoint "result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl" --data-root data\sirst --split test --batch-size 8 --output-dir final_test_outputs\person1\FPN_AsymBi
+& "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python tools\evaluate_acm_checkpoint.py --backbone-mode FPN --fuse-mode AsymBi --checkpoint "experiments\\training_runs\\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl" --data-root data\sirst --split test --batch-size 8 --output-dir experiments\\final_test_outputs\\person1\FPN_AsymBi
 ```
 
 ## Checkpoints
 
-* FPN + BiLocal: `result/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl`
-* FPN + AsymBi: `result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl`
-* FPN + AsymBi best-nIoU checkpoint also exists but was not evaluated: `result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 22_IoU-0.3752_nIoU-0.4941.pkl`
+* FPN + BiLocal: `experiments/training_runs/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl`
+* FPN + AsymBi: `experiments/training_runs/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl`
+* FPN + AsymBi best-nIoU checkpoint also exists but was not evaluated: `experiments/training_runs/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 22_IoU-0.3752_nIoU-0.4941.pkl`
 
 ## Metrics
 
@@ -50,8 +50,8 @@ Note: in the current ACM dataset class, `mode='val'` reads `idx_427/test.txt`. T
 
 ## Outputs
 
-* FPN + BiLocal output directory: `final_test_outputs/person1/FPN_BiLocal`
-* FPN + AsymBi output directory: `final_test_outputs/person1/FPN_AsymBi`
+* FPN + BiLocal output directory: `experiments/final_test_outputs/person1/FPN_BiLocal`
+* FPN + AsymBi output directory: `experiments/final_test_outputs/person1/FPN_AsymBi`
 * Each output directory contains `test_log.txt`, `metrics.json`, `metrics.csv`, and `config_used.txt`.
 * Prediction masks/visualizations were not saved in this first-stage evaluator; only metrics were produced.
 

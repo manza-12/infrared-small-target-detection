@@ -4,9 +4,9 @@
 
 This repository contains the course project code and experiment materials for infrared small target detection and segmentation. The completed experiment line is the ACM segmentation line on the fixed SIRST `idx_427` split.
 
-The repository now includes code, documentation, tables, figures, selected examples, checkpoints, training logs, full prediction visualizations, and `final_test_outputs/` so that teammates can review the results directly on GitHub.
+The repository includes code, documentation, tables, figures, selected examples, checkpoints, training logs, full prediction visualizations, and final test outputs so that teammates can review the results directly on GitHub.
 
-The dataset itself is still not included. To reproduce evaluation or training, place the SIRST data under `data/sirst/` following the expected structure.
+The dataset itself is not included. To reproduce evaluation or training, place the SIRST data under `data/sirst/` following the expected structure.
 
 ## Completed Experiments
 
@@ -38,43 +38,47 @@ Fa is defined as `false_alarm_pixels / total_images`.
 
 ```text
 .
-|-- acm/                         # ACM segmentation source code
-|-- tools/                       # Evaluation, Pd/Fa, visualization, and packaging scripts
-|-- docs/                        # Notes, records, and submission documentation
-|-- result/                      # Checkpoints and training result folders
-|-- final_test_outputs/          # Final evaluation logs and metrics
-|-- background_runs/             # Background training command and logs
-|-- final_experiment_pack/        # Report-ready tables, figures, snippets, and full visualizations
-|   |-- README.md
-|   |-- tables/
-|   |-- figures/
-|   |-- report_snippets/
-|   |-- selected_examples/
-|   |-- visualizations/
-|   |-- bad_cases/
-|   |-- gray_surface/
-|   `-- FAILED_ITEMS.md
-|-- run.py                       # Person-based training entry point
-|-- setup_data.py
+|-- acm/                                  # ACM segmentation source code
+|-- models/                               # Model-related code
+|-- tools/                                # Evaluation, Pd/Fa, visualization, and packaging scripts
+|-- scripts/                              # Helper scripts
+|-- tests/                                # Unit tests
+|-- experiments/
+|   |-- training_runs/                    # Full training results and checkpoints
+|   |-- final_test_outputs/               # Six-model final test logs and metrics
+|   `-- background_runs/                  # Background training commands and logs
+|-- deliverables/
+|   `-- final_experiment_pack/
+|       |-- tables/                       # Main table and ablation tables
+|       |-- figures/                      # Metric comparison figures
+|       |-- report_snippets/              # Report-ready text snippets
+|       |-- selected_examples/            # Representative preview images
+|       |-- visualizations/               # Full prediction triplets
+|       |-- bad_cases/                    # Failure cases
+|       |-- gray_surface/                 # 3D gray response plots
+|       `-- logs/                         # Pack generation logs
+|-- docs/                                 # Notes, records, and migration documentation
+|-- run.py                                # Person-based training entry point
 |-- infer.py
+|-- setup_data.py
 |-- requirements.txt
 `-- .gitignore
 ```
 
+This reorganization changes only the directory hierarchy. It does not reduce repository contents. The repository still includes full checkpoints, full training logs, final test outputs, and full prediction images.
+
 ## Included Artifacts
 
-The repository includes the following experiment artifacts for teammate review:
-
 - ACM pretrained/reference checkpoints under `acm/params/`
-- Experiment checkpoints under `result/`
-- Final test outputs under `final_test_outputs/`
-- Background training logs under `background_runs/`
-- Full prediction visualizations under `final_experiment_pack/visualizations/`
-- Bad-case images and metadata under `final_experiment_pack/bad_cases/`
-- Gray-surface examples under `final_experiment_pack/gray_surface/`
-- Packaging logs under `final_experiment_pack/logs/`
-- Summary tables under `final_experiment_pack/tables/`
-- Report snippets under `final_experiment_pack/report_snippets/`
+- Experiment checkpoints under `experiments/training_runs/`
+- Final test outputs under `experiments/final_test_outputs/`
+- Background training logs under `experiments/background_runs/`
+- Full prediction visualizations under `deliverables/final_experiment_pack/visualizations/`
+- Bad-case images and metadata under `deliverables/final_experiment_pack/bad_cases/`
+- Gray-surface examples under `deliverables/final_experiment_pack/gray_surface/`
+- Packaging logs under `deliverables/final_experiment_pack/logs/`
+- Summary tables under `deliverables/final_experiment_pack/tables/`
+- Report snippets under `deliverables/final_experiment_pack/report_snippets/`
 
 The repository still excludes:
 
@@ -102,11 +106,11 @@ FPN + BiGlobal final test:
 python tools/evaluate_acm_checkpoint.py `
   --backbone-mode FPN `
   --fuse-mode BiGlobal `
-  --checkpoint "result/2026-07-10-11-40-36_FPN_BiGlobal/checkpoint/Epoch- 29_IoU-0.3661_nIoU-0.4457.pkl" `
+  --checkpoint "experiments/training_runs/2026-07-10-11-40-36_FPN_BiGlobal/checkpoint/Epoch- 29_IoU-0.3661_nIoU-0.4457.pkl" `
   --data-root data/sirst `
   --split test `
   --batch-size 8 `
-  --output-dir final_test_outputs/person2/FPN_BiGlobal_selected
+  --output-dir experiments/final_test_outputs/person2/FPN_BiGlobal_selected
 ```
 
 UNet + BiLocal Pd/Fa evaluation:
@@ -115,11 +119,11 @@ UNet + BiLocal Pd/Fa evaluation:
 python tools/evaluate_acm_pd_fa.py `
   --backbone-mode UNet `
   --fuse-mode BiLocal `
-  --checkpoint "result/2026-07-10-12-58-28_UNet_BiLocal/checkpoint/Epoch- 30_IoU-0.3773_nIoU-0.4348.pkl" `
+  --checkpoint "experiments/training_runs/2026-07-10-12-58-28_UNet_BiLocal/checkpoint/Epoch- 30_IoU-0.3773_nIoU-0.4348.pkl" `
   --data-root data/sirst `
   --split test `
   --batch-size 8 `
-  --output-dir final_test_outputs/person2/UNet_BiLocal_selected
+  --output-dir experiments/final_test_outputs/person2/UNet_BiLocal_selected
 ```
 
 Generate prediction triplets:
@@ -128,12 +132,16 @@ Generate prediction triplets:
 python tools/visualize_acm_predictions.py `
   --backbone-mode FPN `
   --fuse-mode BiGlobal `
-  --checkpoint "result/2026-07-10-11-40-36_FPN_BiGlobal/checkpoint/Epoch- 29_IoU-0.3661_nIoU-0.4457.pkl" `
+  --checkpoint "experiments/training_runs/2026-07-10-11-40-36_FPN_BiGlobal/checkpoint/Epoch- 29_IoU-0.3661_nIoU-0.4457.pkl" `
   --data-root data/sirst `
   --split-file idx_427/test.txt `
-  --output-dir final_experiment_pack/visualizations/FPN_BiGlobal `
+  --output-dir deliverables/final_experiment_pack/visualizations/FPN_BiGlobal `
   --max-images 50
 ```
+
+## Deliverables
+
+The main deliverable package is `deliverables/final_experiment_pack/`. Start with `deliverables/final_experiment_pack/INDEX.md` for a compact navigation page.
 
 ## Limitations
 
@@ -141,5 +149,3 @@ python tools/visualize_acm_predictions.py `
 - The current completed study is an ACM segmentation backbone/fusion ablation.
 - PConv k=3/4, SD Loss, SIRST-to-NUAA generalization, and YOLO mAP50 are not part of the current ACM six-model main table.
 - ACM segmentation metrics IoU/nIoU/Pd/Fa should not be mixed directly with YOLO detection mAP50.
-
-

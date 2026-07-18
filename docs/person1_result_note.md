@@ -32,11 +32,11 @@
 ## Output Locations
 
 * Result root: `result`
-* FPN + BiLocal result directory: `result/2026-07-10-01-38-03_FPN_BiLocal`
-* FPN + BiLocal selected checkpoint: `result/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl`
-* FPN + AsymBi result directory: `result/2026-07-10-02-30-15_FPN_AsymBi`
-* FPN + AsymBi selected checkpoint by best IoU: `result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl`
-* FPN + AsymBi best nIoU checkpoint: `result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 22_IoU-0.3752_nIoU-0.4941.pkl`
+* FPN + BiLocal result directory: `experiments/training_runs/2026-07-10-01-38-03_FPN_BiLocal`
+* FPN + BiLocal selected checkpoint: `experiments/training_runs/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl`
+* FPN + AsymBi result directory: `experiments/training_runs/2026-07-10-02-30-15_FPN_AsymBi`
+* FPN + AsymBi selected checkpoint by best IoU: `experiments/training_runs/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl`
+* FPN + AsymBi best nIoU checkpoint: `experiments/training_runs/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 22_IoU-0.3752_nIoU-0.4941.pkl`
 * Training log: `person1_full_train_log.txt`
 
 ## Metrics

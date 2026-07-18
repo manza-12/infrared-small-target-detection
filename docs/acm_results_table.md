@@ -4,8 +4,8 @@
 
 | Backbone | Fusion | Epochs | Batch Size | Best IoU | Best IoU Epoch | Best nIoU | Best nIoU Epoch | Selected Checkpoint | Status | Notes |
 |---|---|---:|---:|---:|---:|---:|---:|---|---|---|
-| FPN | BiLocal | 30 | 8 | 0.26645 | 29 | 0.30931 | 29 | `result/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl` | success | Best IoU and best nIoU are from the same epoch/checkpoint. |
-| FPN | AsymBi | 30 | 8 | 0.40594 | 26 | 0.49409 | 22 | `result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl` | success | Selected checkpoint is by best IoU. Best nIoU is higher at epoch 22: `Epoch- 22_IoU-0.3752_nIoU-0.4941.pkl`. |
+| FPN | BiLocal | 30 | 8 | 0.26645 | 29 | 0.30931 | 29 | `experiments/training_runs/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl` | success | Best IoU and best nIoU are from the same epoch/checkpoint. |
+| FPN | AsymBi | 30 | 8 | 0.40594 | 26 | 0.49409 | 22 | `experiments/training_runs/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl` | success | Selected checkpoint is by best IoU. Best nIoU is higher at epoch 22: `Epoch- 22_IoU-0.3752_nIoU-0.4941.pkl`. |
 
 ## Per-Epoch Validation Metrics
 

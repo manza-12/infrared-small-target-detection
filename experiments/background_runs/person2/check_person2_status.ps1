@@ -1,6 +1,6 @@
-﻿$root = 'C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)'
+$root = Split-Path -Parent (Split-Path -Parent (Split-Path -Parent $PSScriptRoot))
 Set-Location -LiteralPath $root
-$bgDir = Join-Path $root 'background_runs\person2'
+$bgDir = Join-Path $root 'experiments\background_runs\person2'
 $pidFile = Join-Path $bgDir 'person2_pid.txt'
 $stdout = Join-Path $bgDir 'person2_full_train_stdout.log'
 $stderr = Join-Path $bgDir 'person2_full_train_stderr.log'
@@ -23,12 +23,12 @@ Write-Host "`n=== stdout last 80 lines ==="
 if (Test-Path -LiteralPath $stdout) { Get-Content -LiteralPath $stdout -Tail 80 } else { Write-Host 'stdout log not found.' }
 Write-Host "`n=== stderr last 80 lines ==="
 if (Test-Path -LiteralPath $stderr) { Get-Content -LiteralPath $stderr -Tail 80 } else { Write-Host 'stderr log not found.' }
-Write-Host "`n=== latest 10 result directories ==="
-$resultDir = Join-Path $root 'result'
+Write-Host "`n=== latest 10 training run directories ==="
+$resultDir = Join-Path $root 'experiments\training_runs'
 if (Test-Path -LiteralPath $resultDir) {
     Get-ChildItem -LiteralPath $resultDir -Directory | Sort-Object LastWriteTime -Descending | Select-Object -First 10 FullName, LastWriteTime | Format-Table -AutoSize
 } else {
-    Write-Host 'result directory not found.'
+    Write-Host 'training_runs directory not found.'
 }
 Write-Host "`n=== latest checkpoint files ==="
 if (Test-Path -LiteralPath $resultDir) {
