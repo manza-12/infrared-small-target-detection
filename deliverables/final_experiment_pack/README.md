@@ -1,6 +1,8 @@
 # Final Experiment Pack
 
-This folder collects the final deliverable materials for the ACM segmentation line on the SIRST test split. It contains tables, figures, report snippets, and a small number of representative images. It does not contain datasets or checkpoints.
+This folder collects the final deliverable materials for the ACM segmentation line on the SIRST test split. It contains tables, figures, report snippets, representative images, full prediction visualizations, bad cases, gray-surface plots, and packaging logs.
+
+This folder does not contain the dataset. Related checkpoints are stored under `../../experiments/training_runs/`, and related final test outputs are stored under `../../experiments/final_test_outputs/`.
 
 ## Included Models
 
@@ -38,19 +40,15 @@ Metric figures are stored in `figures/`:
 
 ## Visualizations and Bad Cases
 
-Full generated qualitative results are stored in `visualizations/` and bad-case candidates are stored in `bad_cases/`. These folders may contain many generated images and are normally excluded from GitHub by `.gitignore`.
-
-The metadata table is:
-
-- `bad_cases/bad_case_table.csv`
+Full generated qualitative results are stored in `visualizations/`, and bad-case candidates are stored in `bad_cases/`. The metadata table is `bad_cases/bad_case_table.csv`.
 
 ## Gray Surface
 
-The 3D gray response examples are stored in `gray_surface/`. These images describe the SIRST infrared small-target data itself and are not model-dependent, so they are reused for person2.
+The 3D gray response examples are stored in `gray_surface/`. These images describe the SIRST infrared small-target data itself and are not model-dependent.
 
 ## Selected Examples
 
-Small representative images for GitHub or PPT preview are stored in `selected_examples/`. The selected set is intentionally limited to keep the repository lightweight.
+Representative images for GitHub or PPT preview are stored in `selected_examples/`.
 
 ## Report Snippets
 
@@ -60,6 +58,10 @@ Copy-ready report fragments are stored in `report_snippets/`:
 - `results_analysis_all_available.md`
 - `limitations.md`
 - `metric_definitions.md`
+
+## Navigation
+
+Use `INDEX.md` for a compact list of important tables, figures, snippets, checkpoints, and final test outputs.
 
 ## Notes
 

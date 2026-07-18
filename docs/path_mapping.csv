@@ -1,0 +1,5 @@
+old_path,new_path,content_changed,notes
+result/,experiments/training_runs/,false,Directory moved with git mv
+final_test_outputs/,experiments/final_test_outputs/,false,Directory moved with git mv
+background_runs/,experiments/background_runs/,false,Directory moved with git mv
+final_experiment_pack/,deliverables/final_experiment_pack/,false,Directory moved with git mv

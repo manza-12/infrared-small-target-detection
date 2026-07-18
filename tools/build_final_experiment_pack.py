@@ -11,14 +11,14 @@ from PIL import Image
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-PACK_DIR = PROJECT_ROOT / "final_experiment_pack"
+PACK_DIR = PROJECT_ROOT / "deliverables" / "final_experiment_pack"
 
 PERSON1 = [
     {
         "experiment_line": "person1",
         "backbone": "FPN",
         "fusion": "BiLocal",
-        "checkpoint": "result/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl",
+        "checkpoint": "experiments/training_runs/2026-07-10-01-38-03_FPN_BiLocal/checkpoint/Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl",
         "test_set": "data/sirst/idx_427/test.txt",
         "num_test_images": 640,
         "IoU": 0.26644892435619305,
@@ -30,7 +30,7 @@ PERSON1 = [
         "experiment_line": "person1",
         "backbone": "FPN",
         "fusion": "AsymBi",
-        "checkpoint": "result/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl",
+        "checkpoint": "experiments/training_runs/2026-07-10-02-30-15_FPN_AsymBi/checkpoint/Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl",
         "test_set": "data/sirst/idx_427/test.txt",
         "num_test_images": 640,
         "IoU": 0.40594209225945366,
@@ -62,8 +62,8 @@ def write_csv(path, rows, fieldnames):
 
 def write_tables():
     pd_fa_lookup = {
-        "BiLocal": read_json(PROJECT_ROOT / "final_test_outputs/person1/FPN_BiLocal/metrics_pd_fa.json"),
-        "AsymBi": read_json(PROJECT_ROOT / "final_test_outputs/person1/FPN_AsymBi/metrics_pd_fa.json"),
+        "BiLocal": read_json(PROJECT_ROOT / "experiments/final_test_outputs/person1/FPN_BiLocal/metrics_pd_fa.json"),
+        "AsymBi": read_json(PROJECT_ROOT / "experiments/final_test_outputs/person1/FPN_AsymBi/metrics_pd_fa.json"),
     }
     person1_rows = []
     for row in PERSON1:
@@ -309,7 +309,7 @@ def write_scan_summary():
         "* person1 FPN+BiLocal: final test metrics available.",
         "* person1 FPN+AsymBi: final test metrics available.",
         "",
-        "No completed person2/person3/person4 final-test output directories were found under `final_test_outputs/`.",
+        "No completed person2/person3/person4 final-test output directories were found under `experiments/final_test_outputs/`.",
         "",
         "No NUAA or NUAA-SIRST dataset directory was found in the current workspace scan.",
         "",
