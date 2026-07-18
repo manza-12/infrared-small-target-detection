@@ -1,0 +1,12 @@
+{
+  "backbone": "UNet",
+  "fusion": "BiLocal",
+  "split": "test",
+  "num_samples": 640,
+  "evaluated_batches": 80,
+  "batch_size": 8,
+  "loss": 0.6826074693351984,
+  "iou": 0.37725993368050414,
+  "niou": 0.43481443153606963,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\infrared_detection_code (1)\\result\\2026-07-10-12-58-28_UNet_BiLocal\\checkpoint\\Epoch- 30_IoU-0.3773_nIoU-0.4348.pkl"
+}

@@ -1,0 +1,2 @@
+backbone,fusion,split,num_samples,evaluated_batches,batch_size,loss,iou,niou,checkpoint
+UNet,AsymBi,test,640,80,8,0.7100578982383012,0.32624358516384305,0.3772964333345205,C:\Users\bbqsa\Desktop\红外检测\infrared_detection_inference_v2-xcy34\inference_package\checkpoint\asymbi.pt

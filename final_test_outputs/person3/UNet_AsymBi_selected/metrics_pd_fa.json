@@ -1,0 +1,15 @@
+{
+  "backbone": "UNet",
+  "fusion": "AsymBi",
+  "split": "test",
+  "num_images": 640,
+  "target_images": 640,
+  "detected_target_images": 637,
+  "Pd": 0.9953125,
+  "Fa": 530.640625,
+  "Fa_definition": "false_alarm_pixels / total_images",
+  "false_alarm_pixels": 339610,
+  "false_alarm_pixel_rate": 0.002024233341217041,
+  "threshold": 0.5,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\infrared_detection_inference_v2-xcy34\\inference_package\\checkpoint\\asymbi.pt"
+}

@@ -1,0 +1,9 @@
+backbone_mode=UNet
+fuse_mode=AsymBi
+checkpoint=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_inference_v2-xcy34\inference_package\checkpoint\Epoch- 30_IoU-0.2551_nIoU-0.3876.pkl
+data_root=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\data\sirst
+split=test
+split_file=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\data\sirst\idx_427\test.txt
+batch_size=8
+num_samples=640
+max_batches=0

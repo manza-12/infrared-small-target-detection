@@ -1,0 +1,9 @@
+backbone_mode=UNet
+fuse_mode=BiLocal
+checkpoint=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-12-58-28_UNet_BiLocal\checkpoint\Epoch- 30_IoU-0.3773_nIoU-0.4348.pkl
+data_root=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\data\sirst
+split=test
+split_file=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\data\sirst\idx_427\test.txt
+batch_size=8
+num_samples=640
+max_batches=0

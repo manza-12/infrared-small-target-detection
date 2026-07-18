@@ -1,0 +1,2 @@
+backbone,fusion,split,num_images,target_images,detected_target_images,Pd,Fa,Fa_definition,false_alarm_pixels,false_alarm_pixel_rate,threshold,checkpoint
+UNet,AsymBi,test,640,640,637,0.9953125,530.640625,false_alarm_pixels / total_images,339610,0.002024233341217041,0.5,C:\Users\bbqsa\Desktop\红外检测\infrared_detection_inference_v2-xcy34\inference_package\checkpoint\asymbi.pt

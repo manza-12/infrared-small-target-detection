@@ -1,0 +1,2 @@
+backbone,fusion,split,num_images,target_images,detected_target_images,Pd,Fa,Fa_definition,false_alarm_pixels,false_alarm_pixel_rate,threshold,checkpoint
+FPN,AsymBi,test,640,640,634,0.990625,360.0703125,false_alarm_pixels / total_images,230445,0.0013735592365264893,0.5,C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl

@@ -1,0 +1,9 @@
+backbone_mode=FPN
+fuse_mode=BiGlobal
+checkpoint=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-11-40-36_FPN_BiGlobal\checkpoint\Epoch- 29_IoU-0.3661_nIoU-0.4457.pkl
+data_root=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\data\sirst
+split=test
+split_file=C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\data\sirst\idx_427\test.txt
+batch_size=8
+num_samples=640
+max_batches=1

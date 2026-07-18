@@ -1,38 +1,16 @@
-# Datasets
-data/
-datasets/
+﻿# Datasets stay local
+/data/
+/datasets/
 
-# Training and inference outputs
-result/
-results/
-runs/
-outputs/
-final_test_outputs/
-background_runs/
-logs/
-local_archive/
+# Generic caches and unrelated outputs
+/runs/
+/outputs/
+/logs/
+/local_archive/
+/checkpoints/
+/checkpoint/
 
-# Checkpoints and model exports
-checkpoint/
-checkpoints/
-*.pkl
-*.pth
-*.pt
-*.onnx
-*.engine
-
-# Logs and TensorBoard
-*.log
-*_log.txt
-person1_full_train_log.txt
-person1_*_log.txt
-events.out.tfevents*
-
-# Local backups
-*.bak
-*.bak_*
-
-# Large local archives
+# Large archives stay local
 *.zip
 *.tar.gz
 *.tgz
@@ -46,7 +24,15 @@ __pycache__/
 .idea/
 .ipynb_checkpoints/
 
-# Large generated experiment images
-final_experiment_pack/visualizations/
-final_experiment_pack/bad_cases/
-final_experiment_pack/gray_surface/
+# Local backups
+*.bak
+*.bak_*
+
+# Model exports not used by this ACM artifact package
+*.onnx
+*.engine
+
+# NOTE:
+# result/, final_test_outputs/, background_runs/, and full final_experiment_pack
+# visualizations/bad_cases/gray_surface are intentionally tracked for teammate review.
+# ACM checkpoint files (*.pkl) under result/ are intentionally tracked.

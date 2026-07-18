@@ -1,0 +1,42 @@
+folder: result/2026-07-10-11-40-36_FPN_BiGlobal
+Args: Namespace(crop_size=480, base_size=512, batch_size=8, epochs=30, warm_up_epochs=0, learning_rate=0.001, backbone_mode='FPN', fuse_mode='BiGlobal', blocks_per_layer=4)
+backbone: FPN
+fuse mode: BiGlobal
+layer block number: [4, 4, 4]
+channels [8, 16, 32, 64]
+Best IoU: 0.36606, best nIoU: 0.44571
+folder: result/2026-07-10-12-58-28_UNet_BiLocal
+Args: Namespace(crop_size=480, base_size=512, batch_size=8, epochs=30, warm_up_epochs=0, learning_rate=0.001, backbone_mode='UNet', fuse_mode='BiLocal', blocks_per_layer=4)
+backbone: UNet
+fuse mode: BiLocal
+layer block number: [4, 4, 4]
+channels [8, 16, 32, 64]
+Best IoU: 0.37726, best nIoU: 0.43481
+============================================================
+  Person 2 — 2 config(s):
+    - FPN+BiGlobal
+    - UNet+BiLocal
+  Epochs: 30, Batch: 8, LR: 0.001
+============================================================
+
+[SKIP] Data already prepared at C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\data\sirst
+
+[1/2] FPN+BiGlobal
+
+============================================================
+  FPN+BiGlobal
+  "C:\Users\bbqsa\.conda\envs\geoai-yolo\python.exe" "C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\acm\train.py" --backbone-mode FPN --fuse-mode BiGlobal --batch-size 8 --epochs 30 --learning_rate 0.001
+============================================================
+  DONE: FPN+BiGlobal
+
+[2/2] UNet+BiLocal
+
+============================================================
+  UNet+BiLocal
+  "C:\Users\bbqsa\.conda\envs\geoai-yolo\python.exe" "C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\acm\train.py" --backbone-mode UNet --fuse-mode BiLocal --batch-size 8 --epochs 30 --learning_rate 0.001
+============================================================
+  DONE: UNet+BiLocal
+
+============================================================
+  Person 2 — ALL DONE at 2026-07-10 13:49:50.291011
+============================================================

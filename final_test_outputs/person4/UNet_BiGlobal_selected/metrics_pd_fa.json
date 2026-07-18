@@ -1,0 +1,15 @@
+{
+  "backbone": "UNet",
+  "fusion": "BiGlobal",
+  "split": "test",
+  "num_images": 640,
+  "target_images": 640,
+  "detected_target_images": 636,
+  "Pd": 0.99375,
+  "Fa": 389.1375,
+  "Fa_definition": "false_alarm_pixels / total_images",
+  "false_alarm_pixels": 249048,
+  "false_alarm_pixel_rate": 0.0014844417572021484,
+  "threshold": 0.5,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\2026-07-09-23-56-57_UNet_BiGlobal-hk\\checkpoint\\Epoch- 29_IoU-0.3884_nIoU-0.4837.pkl"
+}

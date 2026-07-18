@@ -1,0 +1,2 @@
+backbone,fusion,split,num_images,target_images,detected_target_images,Pd,Fa,Fa_definition,false_alarm_pixels,false_alarm_pixel_rate,threshold,checkpoint
+FPN,BiLocal,test,640,640,632,0.9875,704.678125,false_alarm_pixels / total_images,450994,0.002688133716583252,0.5,C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-01-38-03_FPN_BiLocal\checkpoint\Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl

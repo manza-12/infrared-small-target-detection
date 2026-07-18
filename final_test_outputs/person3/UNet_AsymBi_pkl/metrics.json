@@ -1,0 +1,12 @@
+{
+  "backbone": "UNet",
+  "fusion": "AsymBi",
+  "split": "test",
+  "num_samples": 640,
+  "evaluated_batches": 80,
+  "batch_size": 8,
+  "loss": 0.6970986992120742,
+  "iou": 0.2550900035955537,
+  "niou": 0.3875502326772492,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\infrared_detection_inference_v2-xcy34\\inference_package\\checkpoint\\Epoch- 30_IoU-0.2551_nIoU-0.3876.pkl"
+}

@@ -1,0 +1,12 @@
+{
+  "backbone": "FPN",
+  "fusion": "BiGlobal",
+  "split": "test",
+  "num_samples": 640,
+  "evaluated_batches": 1,
+  "batch_size": 8,
+  "loss": 0.8179928660392761,
+  "iou": 0.13131313131313133,
+  "niou": 0.21071935994346963,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\infrared_detection_code (1)\\result\\2026-07-10-11-40-36_FPN_BiGlobal\\checkpoint\\Epoch- 29_IoU-0.3661_nIoU-0.4457.pkl"
+}

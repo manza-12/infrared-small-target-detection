@@ -1,0 +1,2 @@
+backbone,fusion,split,num_samples,evaluated_batches,batch_size,loss,iou,niou,checkpoint
+UNet,BiLocal,test,640,80,8,0.6826074693351984,0.37725993368050414,0.43481443153606963,C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-12-58-28_UNet_BiLocal\checkpoint\Epoch- 30_IoU-0.3773_nIoU-0.4348.pkl

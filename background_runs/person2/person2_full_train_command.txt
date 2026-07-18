@@ -1,0 +1,1 @@
+﻿& "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python run.py --person 2 --epochs 30 --batch-size 8

@@ -1,0 +1,12 @@
+{
+  "backbone": "UNet",
+  "fusion": "BiGlobal",
+  "split": "test",
+  "num_samples": 640,
+  "evaluated_batches": 80,
+  "batch_size": 8,
+  "loss": 0.6278950981795788,
+  "iou": 0.3883507577176704,
+  "niou": 0.4837368389739455,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\2026-07-09-23-56-57_UNet_BiGlobal-hk\\checkpoint\\Epoch- 29_IoU-0.3884_nIoU-0.4837.pkl"
+}

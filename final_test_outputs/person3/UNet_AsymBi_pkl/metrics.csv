@@ -1,0 +1,2 @@
+backbone,fusion,split,num_samples,evaluated_batches,batch_size,loss,iou,niou,checkpoint
+UNet,AsymBi,test,640,80,8,0.6970986992120742,0.2550900035955537,0.3875502326772492,C:\Users\bbqsa\Desktop\红外检测\infrared_detection_inference_v2-xcy34\inference_package\checkpoint\Epoch- 30_IoU-0.2551_nIoU-0.3876.pkl

@@ -1,0 +1,49 @@
+﻿Person2 full training background process
+Start time: 2026-07-10 11:40:15
+Project root: C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)
+Conda env: geoai-yolo
+Command: & "E:\tools\miniconda3\Library\bin\conda.bat" run --no-capture-output -n geoai-yolo python run.py --person 2 --epochs 30 --batch-size 8
+PID: 30792
+stdout: C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\background_runs\person2\person2_full_train_stdout.log
+stderr: C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\background_runs\person2\person2_full_train_stderr.log
+GPU info before start:
+NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 0 MiB
+
+Post-start check at: 2026-07-10 11:41:42
+PID: 30792
+Process running: True
+Process name: powershell
+Python visible in nvidia-smi: True
+stdout exists: True length: 316
+stderr exists: True length: 28320
+
+Latest result directories:
+
+Name                             LastWriteTime     
+----                             -------------     
+2026-07-10-11-40-36_FPN_BiGlobal 2026/7/10 11:40:36
+2026-07-10-11-35-18_UNet_BiLocal 2026/7/10 11:35:18
+2026-07-10-11-33-31_FPN_BiGlobal 2026/7/10 11:33:31
+2026-07-10-02-30-15_FPN_AsymBi   2026/7/10 2:30:15 
+2026-07-10-01-38-03_FPN_BiLocal  2026/7/10 1:38:03 
+2026-07-10-01-30-43_FPN_AsymBi   2026/7/10 1:30:43 
+2026-07-10-01-27-29_FPN_BiLocal  2026/7/10 1:27:29 
+2026-07-10-01-00-57_FPN_BiLocal  2026/7/10 1:00:57 
+
+
+
+Latest checkpoints:
+
+FullName                                                                                                               
+--------                                                                                                               
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-11-35-18_UNet_BiLocal\checkpoint\Epoch-  1...
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-11-33-31_FPN_BiGlobal\checkpoint\Epoch-  1...
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 26_I...
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 22_I...
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 16_I...
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 15_I...
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 14_I...
+C:\Users\bbqsa\Desktop\红外检测\infrared_detection_code (1)\result\2026-07-10-02-30-15_FPN_AsymBi\checkpoint\Epoch- 12_I...
+
+
+

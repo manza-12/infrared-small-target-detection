@@ -1,0 +1,2 @@
+backbone,fusion,split,num_images,target_images,detected_target_images,Pd,Fa,Fa_definition,false_alarm_pixels,false_alarm_pixel_rate,threshold,checkpoint
+UNet,BiGlobal,test,640,640,636,0.99375,389.1375,false_alarm_pixels / total_images,249048,0.0014844417572021484,0.5,C:\Users\bbqsa\Desktop\红外检测\2026-07-09-23-56-57_UNet_BiGlobal-hk\checkpoint\Epoch- 29_IoU-0.3884_nIoU-0.4837.pkl

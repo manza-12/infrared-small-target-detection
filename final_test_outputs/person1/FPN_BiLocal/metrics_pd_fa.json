@@ -1,0 +1,15 @@
+{
+  "backbone": "FPN",
+  "fusion": "BiLocal",
+  "split": "test",
+  "num_images": 640,
+  "target_images": 640,
+  "detected_target_images": 632,
+  "Pd": 0.9875,
+  "Fa": 704.678125,
+  "Fa_definition": "false_alarm_pixels / total_images",
+  "false_alarm_pixels": 450994,
+  "false_alarm_pixel_rate": 0.002688133716583252,
+  "threshold": 0.5,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\infrared_detection_code (1)\\result\\2026-07-10-01-38-03_FPN_BiLocal\\checkpoint\\Epoch- 29_IoU-0.2664_nIoU-0.3093.pkl"
+}

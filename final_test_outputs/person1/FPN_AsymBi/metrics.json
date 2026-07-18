@@ -1,0 +1,12 @@
+{
+  "backbone": "FPN",
+  "fusion": "AsymBi",
+  "split": "test",
+  "num_samples": 640,
+  "evaluated_batches": 80,
+  "batch_size": 8,
+  "loss": 0.6295528568327426,
+  "iou": 0.40594209225945366,
+  "niou": 0.48558731667721544,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\infrared_detection_code (1)\\result\\2026-07-10-02-30-15_FPN_AsymBi\\checkpoint\\Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl"
+}

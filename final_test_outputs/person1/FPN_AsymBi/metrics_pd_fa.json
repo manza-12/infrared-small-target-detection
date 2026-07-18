@@ -1,0 +1,15 @@
+{
+  "backbone": "FPN",
+  "fusion": "AsymBi",
+  "split": "test",
+  "num_images": 640,
+  "target_images": 640,
+  "detected_target_images": 634,
+  "Pd": 0.990625,
+  "Fa": 360.0703125,
+  "Fa_definition": "false_alarm_pixels / total_images",
+  "false_alarm_pixels": 230445,
+  "false_alarm_pixel_rate": 0.0013735592365264893,
+  "threshold": 0.5,
+  "checkpoint": "C:\\Users\\bbqsa\\Desktop\\红外检测\\infrared_detection_code (1)\\result\\2026-07-10-02-30-15_FPN_AsymBi\\checkpoint\\Epoch- 26_IoU-0.4059_nIoU-0.4856.pkl"
+}
